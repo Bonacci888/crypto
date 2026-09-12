@@ -1,0 +1,66 @@
+==========================================================
+  LIVE-DATEN: AERO  |  2026-09-12 12:44 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    0.57916 USD
+    24h:        +1.04%   (24h-High 0.61632 / Low 0.56122)
+
+[2] FUNDING/OI: kein AERO-Perp auf Bybit/Binance gefunden
+
+[3] LONG/SHORT-RATIO: n/a
+
+[4] FEAR & GREED INDEX: 63 (Greed)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -0.87%  (Kurs 77,316 USD)
+    BTC-Dominanz: 58.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE - Block kopieren + mit Screenshots in den Chat
+==========================================================
+
+==========================================================
+  LIVE-DATEN: XRP  |  2026-09-12 12:44 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    1.3705 USD
+    24h:        +0.31%   (24h-High 1.4332 / Low 1.346)
+
+[2] FUNDING/OI: kein XRP-Perp auf Bybit/Binance gefunden
+
+[3] LONG/SHORT-RATIO: n/a
+
+[4] FEAR & GREED INDEX: 63 (Greed)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -0.87%  (Kurs 77,316 USD)
+    BTC-Dominanz: 58.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE - Block kopieren + mit Screenshots in den Chat
+==========================================================
+
+==========================================================
+  LIVE-DATEN: BTC  |  2026-09-12 12:44 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    77306 USD
+    24h:        -0.88%   (24h-High 79852.22 / Low 76850)
+
+[2] FUNDING/OI: kein BTC-Perp auf Bybit/Binance gefunden
+
+[3] LONG/SHORT-RATIO: n/a
+
+[4] FEAR & GREED INDEX: 63 (Greed)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -0.88%  (Kurs 77,306 USD)
+    BTC-Dominanz: 58.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE - Block kopieren + mit Screenshots in den Chat
+==========================================================
+

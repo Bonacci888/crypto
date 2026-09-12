@@ -5,8 +5,11 @@ crypto_check.py – Live-Daten-Modul für die Chart-Analyse
 =========================================================
 Ruft OHNE API-Key ab:
   - Kurs + 24h-Änderung      (Coinbase Exchange, öffentlich)
-  - Funding Rate + Open Interest (Bybit v5, öffentlich; Fallback Binance)
-  - Long/Short-Ratio         (Binance Futures, öffentlich)
+  - Funding Rate + Open Interest
+      Reihenfolge: Kraken Futures -> Hyperliquid -> Bybit -> Binance
+      (Kraken/Hyperliquid funktionieren auch von GitHub-US-Runnern;
+       Bybit/Binance sperren US-IPs -> Fallback, lokal nutzbar)
+  - Long/Short-Ratio         (Binance Futures, öffentlich; US-geblockt -> n/a auf GH)
   - Fear & Greed Index       (alternative.me, öffentlich)
   - BTC-Kontext (Kurs, Funding, Dominanz falls erreichbar)
 
@@ -15,7 +18,6 @@ NUTZUNG:
   python3 crypto_check.py XRP
   python3 crypto_check.py BTC
 
-Dann den Ausgabe-Block in den Chat kopieren (zusammen mit den Screenshots).
 Nur Python-Standardbibliothek -> keine Installation noetig.
 """
 
@@ -26,7 +28,8 @@ import urllib.request
 import urllib.error
 from datetime import datetime, timezone
 
-UA = {"User-Agent": "crypto-check/1.0"}
+UA = {"User-Agent": "crypto-check/1.0",
+      "Content-Type": "application/json"}
 
 
 def get(url, params=None, timeout=12):
@@ -37,7 +40,17 @@ def get(url, params=None, timeout=12):
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.loads(r.read().decode("utf-8"))
-    except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError, TimeoutError):
+    except Exception:
+        return None
+
+
+def post(url, payload, timeout=12):
+    req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"),
+                                 headers=UA, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except Exception:
         return None
 
 
@@ -57,6 +70,38 @@ def coinbase_stats(product):
             "high": d.get("high"), "low": d.get("low"), "volume": d.get("volume")}
 
 
+# ---------- Derivatsdaten: mehrere Quellen der Reihe nach ----------
+
+def kraken_futures(sym):
+    """Kraken Futures v3 Tickers - US-kompatibel, kein Key."""
+    d = get("https://futures.kraken.com/derivatives/api/v3/tickers")
+    if not d or d.get("result") != "success":
+        return None
+    target = f"PF_{sym}USD"
+    for t in d.get("tickers", []):
+        if t.get("symbol") == target:
+            return {"funding": float(t["fundingRate"]) * 100,
+                    "oi": t.get("openInterest"),
+                    "src": "Kraken Futures"}
+    return None
+
+
+def hyperliquid(sym):
+    """Hyperliquid metaAndAssetCtxs - permissionless, kein Key.
+    Achtung: Funding ist STUENDLICH -> hier auf 8h hochgerechnet."""
+    d = post("https://api.hyperliquid.xyz/info", {"type": "metaAndAssetCtxs"})
+    if not d or len(d) < 2:
+        return None
+    universe, ctxs = d[0]["universe"], d[1]
+    for i, asset in enumerate(universe):
+        if asset.get("name", "").upper() == sym:
+            c = ctxs[i]
+            return {"funding": float(c["funding"]) * 8 * 100,  # 8h-aequivalent
+                    "oi": c.get("openInterest"),
+                    "src": "Hyperliquid (8h-aequiv.)"}
+    return None
+
+
 def bybit_linear(sym):
     d = get("https://api.bybit.com/v5/market/tickers",
             {"category": "linear", "symbol": sym})
@@ -64,18 +109,26 @@ def bybit_linear(sym):
         t = d["result"]["list"][0]
         return {"funding": float(t["fundingRate"]) * 100,
                 "oi": t.get("openInterest"),
-                "oi_value": t.get("openInterestValue"),
-                "price24h": float(t["price24hPcnt"])}
-    except (TypeError, KeyError, IndexError):
+                "src": "Bybit"}
+    except Exception:
         return None
 
 
 def binance_funding(sym):
     d = get("https://fapi.binance.com/fapi/v1/premiumIndex", {"symbol": sym})
     try:
-        return {"funding": float(d["lastFundingRate"]) * 100}
-    except (TypeError, KeyError):
+        return {"funding": float(d["lastFundingRate"]) * 100,
+                "oi": None, "src": "Binance"}
+    except Exception:
         return None
+
+
+def deriv_data(sym):
+    for src in (kraken_futures, hyperliquid, bybit_linear, binance_funding):
+        r = src(sym)
+        if r:
+            return r
+    return None
 
 
 def binance_longshort(sym):
@@ -83,7 +136,7 @@ def binance_longshort(sym):
             {"symbol": sym, "period": "1d", "limit": 1})
     try:
         return float(d[0]["longShortRatio"])
-    except (TypeError, KeyError, IndexError):
+    except Exception:
         return None
 
 
@@ -92,7 +145,7 @@ def fear_greed():
     try:
         x = d["data"][0]
         return {"value": int(x["value"]), "class": x["value_classification"]}
-    except (TypeError, KeyError, IndexError):
+    except Exception:
         return None
 
 
@@ -100,7 +153,7 @@ def btc_dominance():
     d = get("https://api.coingecko.com/api/v3/global")
     try:
         return float(d["data"]["market_cap_percentage"]["btc"])
-    except (TypeError, KeyError):
+    except Exception:
         return None
 
 
@@ -122,13 +175,12 @@ def interpret_fg(v):
     return "neutraler Bereich"
 
 
-def run(symbol):
+def run(symbol, fg_cache):
     sym = symbol.upper().strip()
     print("=" * 58)
     print(f"  LIVE-DATEN: {sym}  |  {datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC}")
     print("=" * 58)
 
-    # 1) Spot-Kurs (Coinbase)
     spot = coinbase_stats(f"{sym}-USD")
     if spot:
         print(f"\n[1] KURS (Coinbase Spot)")
@@ -137,53 +189,43 @@ def run(symbol):
     else:
         print("\n[1] KURS: Coinbase-Daten nicht erreichbar")
 
-    # 2) Funding + OI
-    der = bybit_linear(f"{sym}USDT")
-    src = "Bybit"
-    if not der:
-        der = binance_funding(f"{sym}USDT")
-        src = "Binance"
+    der = deriv_data(sym)
     if der:
-        print(f"\n[2] FUNDING + OPEN INTEREST ({src})")
+        print(f"\n[2] FUNDING + OPEN INTEREST ({der['src']})")
         print(f"    Funding:    {der['funding']:+.4f}%   -> {interpret_funding(der['funding'])}")
         if der.get("oi"):
-            print(f"    Open Int.:  {der['oi']}  (Wert: {der.get('oi_value', 'n/a')} USD)")
-        if der.get("price24h") is not None:
-            print(f"    24h (Deriv.): {pct(der['price24h'])}")
+            print(f"    Open Int.:  {der['oi']}")
     else:
-        print(f"\n[2] FUNDING/OI: kein {sym}-Perp auf Bybit/Binance gefunden")
+        print(f"\n[2] FUNDING/OI: kein {sym}-Perp auf Kraken/Hyperliquid/Bybit/Binance")
 
-    # 3) Long/Short-Ratio
     ls = binance_longshort(f"{sym}USDT")
     if ls:
         tag = "mehr Longs" if ls > 1 else ("mehr Shorts" if ls < 1 else "ausgewogen")
         print(f"\n[3] LONG/SHORT-RATIO (Binance, 1d): {ls:.3f}  ({tag})")
     else:
-        print("\n[3] LONG/SHORT-RATIO: n/a")
+        print("\n[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)")
 
-    # 4) Fear & Greed
-    fg = fear_greed()
-    if fg:
-        print(f"\n[4] FEAR & GREED INDEX: {fg['value']} ({fg['class']})  -> {interpret_fg(fg['value'])}")
+    if fg_cache:
+        print(f"\n[4] FEAR & GREED INDEX: {fg_cache['value']} ({fg_cache['class']})  -> {interpret_fg(fg_cache['value'])}")
     else:
         print("\n[4] FEAR & GREED: n/a")
 
-    # 5) BTC-Kontext
-    print("\n[5] BTC-KONTEXT")
-    btc = coinbase_stats("BTC-USD")
-    if btc:
-        print(f"    BTC 24h:    {pct(btc['change'])}  (Kurs {btc['last']:,.0f} USD)")
-    bder = bybit_linear("BTCUSDT")
-    if bder:
-        print(f"    BTC Funding: {bder['funding']:+.4f}%  -> {interpret_funding(bder['funding'])}")
-    dom = btc_dominance()
-    if dom:
-        print(f"    BTC-Dominanz: {dom:.1f}%  ({'steigend = Alts unter Druck' if dom > 50 else 'Alts haben Raum'})")
-    else:
-        print("    BTC-Dominanz: n/a (CoinGecko nicht erreichbar)")
+    if sym != "BTC":
+        print("\n[5] BTC-KONTEXT")
+        btc = coinbase_stats("BTC-USD")
+        if btc:
+            print(f"    BTC 24h:    {pct(btc['change'])}  (Kurs {btc['last']:,.0f} USD)")
+        bder = deriv_data("BTC")
+        if bder:
+            print(f"    BTC Funding: {bder['funding']:+.4f}% ({bder['src']})  -> {interpret_funding(bder['funding'])}")
+        dom = btc_dominance()
+        if dom:
+            print(f"    BTC-Dominanz: {dom:.1f}%  ({'steigend = Alts unter Druck' if dom > 50 else 'Alts haben Raum'})")
+        else:
+            print("    BTC-Dominanz: n/a (CoinGecko nicht erreichbar)")
 
     print("\n" + "=" * 58)
-    print("  ENDE - Block kopieren + mit Screenshots in den Chat")
+    print("  ENDE")
     print("=" * 58)
 
 
@@ -191,7 +233,9 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(0)
+    fg_cache = fear_greed()  # 1x pro Lauf, gilt fuer alle Coins
+    dom_cache = btc_dominance()
     for s in sys.argv[1:]:
-        run(s)
+        run(s, fg_cache)
         print()
         time.sleep(1)

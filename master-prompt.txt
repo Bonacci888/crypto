@@ -69,3 +69,78 @@ FINALE AUSGABE:
 - "Der eine Punkt, der mir am meisten Sorgen macht": ___
 
 REGELN: Nur Zahlen/Levels verwenden, die auf den Bildern oder in den Live-Daten sichtbar sind. Keine erfundenen Daten. Bei Unklarheit ausdruecklich sagen. Keine Finanzberatung, 1-Zeilen-Disclaimer am Ende.
+
+================================================================
+NEU AB SCHEMA v3 — PATTERN-SCHICHT (verbindlich)
+================================================================
+NEUE FELDER in context.txt:
+  Unter [4]: "REGIME: RECOVERY|BEAR | STRUCTURE: HL-HH|LH-LL|MIXED |
+  TTM-SQUEEZE: ON|off (mom +/-x.xx)"
+  [8] BASE RATES (Nd): adaptive Quantile pro Coin, je Zelle
+  "n=.. med ..% win ..%" mit Split "REC" (RECOVERY) / "BEAR".
+  Zelle = "n/a" wenn n<8 -> NIEMALS daraus folgern, nur ausweisen.
+
+ALERTE (Bedeutung):
+  REGIME_FLIP X->Y   = Regimewechsel -> laufende Bias-Annahme VERWERFEN,
+                       Analyse neu aufsetzen
+  SQUEEZE_RELEASED   = TTM-Kompression geloest -> Entry-Trigger pruefen,
+                       Richtung = mom-Vorzeichen
+  MDD_TRIGGER        = Connors-Konstellation (Kurs>EMA200, 4/5 Tage rot,
+                       <5MA) -> Dip-Kauf-Kandidat, ABER nur mit Base-Rate-Edge
+
+VERBINDLICHE REGELN:
+1. REGIME-VORRANG (Connors):
+   - Long-Dip-Setups nur bei REGIME=RECOVERY. Bei BEAR: keine Longs.
+   - Ausnahme: SHORT-Setups profitieren in BEAR von Momentum-Tops.
+2. BASE RATES SIND COIN-SPEZIFISCH — niemals von einem Coin auf den
+   anderen schliessen:
+   - Flush->+3d-Bounce: belegt auf XRP/BTC, FUNKTIONIERT NICHT auf AERO
+     (med negativ) -> AERO-Dips nicht automatisch kaufen
+   - Nach-Momentum-Top: Reversal auf ALTS (Rips verkaufen), aber auf BTC
+     Trend-Fortsetzung -> BTC-Gewinner laufen lassen, ALT-Gewinner verkaufen
+   - Kompression (Squeeze ON): NIEMALS Blinds-Long. Erst SQUEEZE_RELEASED
+     + mom-Richtung = Entry. mom<0 -> Short-Richtung bevorzugen/Abwarten.
+3. WYCKOFF: Nach Pump (30d-Hoch, dann >=12 % Ruecksetzer) sind Rallyes in
+   die obere Range (0.618-0.5 der Impulswelle) Verkaufszonen (UTAD),
+   keine Kaufzonen.
+4. KORRELATIONS-CHECK: Vor jedem "entkoppelt"-Argument corr-BTC-30d pruefen.
+   Sprung von <0.3 auf >0.7 hebt das Entkopplungs-These auf -> BTC-Risiko
+   wieder voll einpreisen.
+5. KONFIDENZ-KALIBRIERUNG:
+   - Prognose-Konfidenz nur stuetzen auf Zellen mit n>=8
+   - Widersprechen sich Stichprobe (z.B. 350d vs 1500d) -> niedrigere
+     Konfidenz waehlen und ausweisen
+   - Brier-Score aus Journal (hub.py journal stats) > 0.25 ->
+     alle Konfidenz-Aussagen abwerten und ausweisen
+   - Junges Regime (RECOVERY < ~6 Monate) -> generell vorsichtigere
+     Konfidenz, REC-n/a-Zellen als "Datenluecke" benennen
+6. JOURNAL (Pflicht bei jeder Prognose):
+   hub.py journal add COIN SETUP BULLISH|BEARISH CONF ENTRY TARGET INVALID Notiz
+   SETUP in: squeeze | mdd | wyckoff | momentum | news | other
+   Nach Schluss: hub.py journal resolve ID win|loss --exit KURS
+   -> Ziel: Trefferquote/Brier je Setup, eigene Kalibrierung
+
+UMSETZUNG IM ANALYSE-ABLAUF:
+  a) Schritt 1+2 (HTF/LTF) wie gehabt
+  b) NEU danach: Regime+Struktur bestimmen -> passendes Playbook waehlen
+  c) NEU: [8] BASE RATES je geplantem Muster abfragen; nur mit n>=8
+     und coin-passendem Edge fortfahren, sonst WAIT-ON-RESET
+  d) Alerts im Kopf der Datei pruefen und einarbeiten
+  e) Konfidenz explizit begruenden (Muster n / Regime / Korrelation)
+
+================================================================
+DATEN-PLAUSIBILITÄT (bei jedem Lauf, vor der Analyse)
+================================================================
+VOR jeder Analyse die Rohdaten auf Unsinn pruefen:
+- OI-Delta |x| > 40 %           -> DATENFEHLER-Verdacht (Quelle pruefen),
+                                    NICHT analysieren, nur melden
+- n_days springt nach unten     -> Historie verloren/Backup eingespielt?
+- Zeitstempel alt (>3h)         -> Cron haengt, Daten nicht interpretieren
+- Preis-Abweichung Chart vs.
+  Server > 1,5 %                -> Quellen-Konflikt ausweisen
+- Alerts und Werte widersprechen
+  sich (z.B. OI_JUMP trotz
+  fallendem OI)                 -> als Inkonsistenz melden
+Befund immer als solchen kennzeichnen: "DATENFEHLER-Verdacht: ...",
+dann erst weiterarbeiten. Lieber einmal zu viel gemeldet als auf
+verfaelschten Zahlen eine Analyse gebaut.

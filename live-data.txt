@@ -1,68 +1,68 @@
 ==========================================================
-  LIVE-DATEN: AERO  |  2026-09-14 23:12 UTC
+  LIVE-DATEN: AERO  |  2026-09-15 01:33 UTC
 ==========================================================
 
 [1] KURS (Coinbase Spot)
-    Aktuell:    0.57245 USD
-    24h:        +2.86%   (24h-High 0.586 / Low 0.5542)
-
-[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
-    Funding:    +0.0073%   -> neutral
-    Open Int.:  30470206.0
-
-[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
-
-[4] FEAR & GREED INDEX: 57 (Greed)  -> neutraler Bereich
-
-[5] BTC-KONTEXT
-    BTC 24h:    +2.11%  (Kurs 78,423 USD)
-    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
-    BTC-Dominanz: 58.5%  (steigend = Alts unter Druck)
-
-==========================================================
-  ENDE
-==========================================================
-
-==========================================================
-  LIVE-DATEN: XRP  |  2026-09-14 23:12 UTC
-==========================================================
-
-[1] KURS (Coinbase Spot)
-    Aktuell:    1.4298 USD
-    24h:        +6.65%   (24h-High 1.4914 / Low 1.3346)
-
-[2] FUNDING + OPEN INTEREST (Kraken Futures)
-    Funding:    -0.0016%   -> neutral
-    Open Int.:  9938742.0
-
-[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
-
-[4] FEAR & GREED INDEX: 57 (Greed)  -> neutraler Bereich
-
-[5] BTC-KONTEXT
-    BTC 24h:    +2.11%  (Kurs 78,423 USD)
-    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
-    BTC-Dominanz: 58.5%  (steigend = Alts unter Druck)
-
-==========================================================
-  ENDE
-==========================================================
-
-==========================================================
-  LIVE-DATEN: BTC  |  2026-09-14 23:12 UTC
-==========================================================
-
-[1] KURS (Coinbase Spot)
-    Aktuell:    78423 USD
-    24h:        +2.11%   (24h-High 79591.17 / Low 76347.27)
+    Aktuell:    0.5641 USD
+    24h:        -0.26%   (24h-High 0.586 / Low 0.5634)
 
 [2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
     Funding:    +0.0100%   -> neutral
-    Open Int.:  36039.74802
+    Open Int.:  30490900.0
 
 [3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
 
-[4] FEAR & GREED INDEX: 57 (Greed)  -> neutraler Bereich
+[4] FEAR & GREED INDEX: 69 (Greed)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    +1.09%  (Kurs 77,918 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 58.4%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: XRP  |  2026-09-15 01:33 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    1.4234 USD
+    24h:        +5.35%   (24h-High 1.4914 / Low 1.3492)
+
+[2] FUNDING + OPEN INTEREST (Kraken Futures)
+    Funding:    -0.0036%   -> neutral
+    Open Int.:  9977470.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 69 (Greed)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    +1.19%  (Kurs 77,989 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: n/a (CoinGecko nicht erreichbar)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: BTC  |  2026-09-15 01:33 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    77989 USD
+    24h:        +1.19%   (24h-High 79591.17 / Low 76973.84)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0100%   -> neutral
+    Open Int.:  35467.54018
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 69 (Greed)  -> neutraler Bereich
 
 ==========================================================
   ENDE

@@ -1,21 +1,21 @@
 ==========================================================
-  LIVE-DATEN: AERO  |  2026-09-19 05:58 UTC
+  LIVE-DATEN: AERO  |  2026-09-19 11:09 UTC
 ==========================================================
 
 [1] KURS (Coinbase Spot)
-    Aktuell:    0.67144 USD
-    24h:        +9.84%   (24h-High 0.6925 / Low 0.61131)
+    Aktuell:    0.6803 USD
+    24h:        +10.24%   (24h-High 0.6925 / Low 0.6145)
 
 [2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
-    Funding:    +0.0743%   -> ueberoptimistisch -> Kontra-Signal, Vorsicht Longs
-    Open Int.:  30087848.0
+    Funding:    +0.0656%   -> ueberoptimistisch -> Kontra-Signal, Vorsicht Longs
+    Open Int.:  32801910.0
 
 [3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
 
 [4] FEAR & GREED INDEX: 71 (Greed)  -> neutraler Bereich
 
 [5] BTC-KONTEXT
-    BTC 24h:    +4.62%  (Kurs 81,008 USD)
+    BTC 24h:    +4.22%  (Kurs 81,286 USD)
     BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
     BTC-Dominanz: 58.3%  (steigend = Alts unter Druck)
 
@@ -24,23 +24,23 @@
 ==========================================================
 
 ==========================================================
-  LIVE-DATEN: XRP  |  2026-09-19 05:58 UTC
+  LIVE-DATEN: XRP  |  2026-09-19 11:09 UTC
 ==========================================================
 
 [1] KURS (Coinbase Spot)
-    Aktuell:    1.4278 USD
-    24h:        +8.38%   (24h-High 1.4384 / Low 1.3149)
+    Aktuell:    1.4244 USD
+    24h:        +7.71%   (24h-High 1.4384 / Low 1.3183)
 
 [2] FUNDING + OPEN INTEREST (Kraken Futures)
-    Funding:    +0.0032%   -> neutral
-    Open Int.:  10713814.0
+    Funding:    +0.0054%   -> neutral
+    Open Int.:  10702630.0
 
 [3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
 
 [4] FEAR & GREED INDEX: 71 (Greed)  -> neutraler Bereich
 
 [5] BTC-KONTEXT
-    BTC 24h:    +4.62%  (Kurs 81,008 USD)
+    BTC 24h:    +4.25%  (Kurs 81,309 USD)
     BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
     BTC-Dominanz: 58.3%  (steigend = Alts unter Druck)
 
@@ -49,16 +49,16 @@
 ==========================================================
 
 ==========================================================
-  LIVE-DATEN: BTC  |  2026-09-19 05:58 UTC
+  LIVE-DATEN: BTC  |  2026-09-19 11:09 UTC
 ==========================================================
 
 [1] KURS (Coinbase Spot)
-    Aktuell:    81008 USD
-    24h:        +4.62%   (24h-High 81720 / Low 77332.07)
+    Aktuell:    81309 USD
+    24h:        +4.25%   (24h-High 81720 / Low 77900)
 
 [2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
     Funding:    +0.0100%   -> neutral
-    Open Int.:  43289.12042
+    Open Int.:  43325.31838
 
 [3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
 

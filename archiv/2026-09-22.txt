@@ -1,0 +1,70 @@
+==========================================================
+  LIVE-DATEN: AERO  |  2026-09-22 01:38 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    0.68842 USD
+    24h:        +4.71%   (24h-High 0.70709 / Low 0.65456)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0100%   -> neutral
+    Open Int.:  33706340.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 78 (Extreme Greed)  -> Greed -> Korrekturrisiko
+
+[5] BTC-KONTEXT
+    BTC 24h:    +5.92%  (Kurs 85,769 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 58.8%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: XRP  |  2026-09-22 01:38 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    1.5144 USD
+    24h:        +7.59%   (24h-High 1.5746 / Low 1.4045)
+
+[2] FUNDING + OPEN INTEREST (Kraken Futures)
+    Funding:    +0.0008%   -> neutral
+    Open Int.:  9611640.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 78 (Extreme Greed)  -> Greed -> Korrekturrisiko
+
+[5] BTC-KONTEXT
+    BTC 24h:    +5.86%  (Kurs 85,715 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 58.8%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: BTC  |  2026-09-22 01:38 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    85715 USD
+    24h:        +5.86%   (24h-High 87397 / Low 80934)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0100%   -> neutral
+    Open Int.:  43840.1912
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 78 (Extreme Greed)  -> Greed -> Korrekturrisiko
+
+==========================================================
+  ENDE
+==========================================================
+

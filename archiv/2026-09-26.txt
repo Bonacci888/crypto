@@ -1,0 +1,70 @@
+==========================================================
+  LIVE-DATEN: AERO  |  2026-09-26 01:39 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    0.84246 USD
+    24h:        +20.98%   (24h-High 0.88 / Low 0.69061)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0720%   -> ueberoptimistisch -> Kontra-Signal, Vorsicht Longs
+    Open Int.:  40452098.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 74 (Greed)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -0.67%  (Kurs 84,026 USD)
+    BTC Funding: +0.0060% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 58.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: XRP  |  2026-09-26 01:39 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    1.5777 USD
+    24h:        +2.37%   (24h-High 1.6299 / Low 1.5185)
+
+[2] FUNDING + OPEN INTEREST (Kraken Futures)
+    Funding:    -0.0025%   -> neutral
+    Open Int.:  10205463.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 74 (Greed)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -0.67%  (Kurs 84,026 USD)
+    BTC Funding: +0.0059% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 58.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: BTC  |  2026-09-26 01:39 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    84026 USD
+    24h:        -0.67%   (24h-High 85250 / Low 83091.19)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0059%   -> neutral
+    Open Int.:  37997.51228
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 74 (Greed)  -> neutraler Bereich
+
+==========================================================
+  ENDE
+==========================================================
+

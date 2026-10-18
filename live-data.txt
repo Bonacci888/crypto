@@ -1,66 +1,66 @@
 ==========================================================
-  LIVE-DATEN: AERO  |  2026-10-18 20:52 UTC
+  LIVE-DATEN: AERO  |  2026-10-18 23:20 UTC
 ==========================================================
 
 [1] KURS (Coinbase Spot)
-    Aktuell:    0.769 USD
-    24h:        -10.08%   (24h-High 0.85721 / Low 0.76731)
+    Aktuell:    0.7975 USD
+    24h:        -5.37%   (24h-High 0.85562 / Low 0.76402)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0001%   -> neutral
+    Open Int.:  36684614.0
+
+[3] LONG/SHORT-RATIO (Binance, 1d): 1.458  (mehr Longs)
+
+[4] FEAR & GREED INDEX: 53 (Neutral)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    +0.37%  (Kurs 81,689 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 60.1%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: XRP  |  2026-10-18 23:20 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    1.2964 USD
+    24h:        +0.31%   (24h-High 1.3038 / Low 1.2547)
+
+[2] FUNDING + OPEN INTEREST (Kraken Futures)
+    Funding:    +0.0045%   -> neutral
+    Open Int.:  14900632.0
+
+[3] LONG/SHORT-RATIO (Binance, 1d): 2.899  (mehr Longs)
+
+[4] FEAR & GREED INDEX: 53 (Neutral)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    +0.39%  (Kurs 81,701 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 60.1%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: BTC  |  2026-10-18 23:20 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    81701 USD
+    24h:        +0.39%   (24h-High 82183.56 / Low 80564.57)
 
 [2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
     Funding:    +0.0100%   -> neutral
-    Open Int.:  37924052.0
+    Open Int.:  39300.80828
 
-[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
-
-[4] FEAR & GREED INDEX: 53 (Neutral)  -> neutraler Bereich
-
-[5] BTC-KONTEXT
-    BTC 24h:    -0.91%  (Kurs 80,802 USD)
-    BTC Funding: -0.0012% (Hyperliquid (8h-aequiv.))  -> neutral
-    BTC-Dominanz: 60.3%  (steigend = Alts unter Druck)
-
-==========================================================
-  ENDE
-==========================================================
-
-==========================================================
-  LIVE-DATEN: XRP  |  2026-10-18 20:52 UTC
-==========================================================
-
-[1] KURS (Coinbase Spot)
-    Aktuell:    1.2598 USD
-    24h:        -3.20%   (24h-High 1.3046 / Low 1.2547)
-
-[2] FUNDING + OPEN INTEREST (Kraken Futures)
-    Funding:    +0.0002%   -> neutral
-    Open Int.:  14565621.0
-
-[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
-
-[4] FEAR & GREED INDEX: 53 (Neutral)  -> neutraler Bereich
-
-[5] BTC-KONTEXT
-    BTC 24h:    -0.91%  (Kurs 80,802 USD)
-    BTC Funding: -0.0012% (Hyperliquid (8h-aequiv.))  -> neutral
-    BTC-Dominanz: 60.3%  (steigend = Alts unter Druck)
-
-==========================================================
-  ENDE
-==========================================================
-
-==========================================================
-  LIVE-DATEN: BTC  |  2026-10-18 20:52 UTC
-==========================================================
-
-[1] KURS (Coinbase Spot)
-    Aktuell:    80769 USD
-    24h:        -0.95%   (24h-High 82183.56 / Low 80564.57)
-
-[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
-    Funding:    -0.0012%   -> neutral
-    Open Int.:  40807.27726
-
-[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+[3] LONG/SHORT-RATIO (Binance, 1d): 1.748  (mehr Longs)
 
 [4] FEAR & GREED INDEX: 53 (Neutral)  -> neutraler Bereich
 

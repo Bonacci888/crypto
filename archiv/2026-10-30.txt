@@ -1,0 +1,70 @@
+==========================================================
+  LIVE-DATEN: AERO  |  2026-10-30 02:42 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    0.616 USD
+    24h:        -8.03%   (24h-High 0.71048 / Low 0.6039)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0100%   -> neutral
+    Open Int.:  37120734.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 30 (Fear)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -3.12%  (Kurs 77,364 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 59.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: XRP  |  2026-10-30 02:42 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    1.2238 USD
+    24h:        -5.46%   (24h-High 1.3168 / Low 1.1975)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    -0.0136%   -> neutral
+    Open Int.:  159670530.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 30 (Fear)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -3.12%  (Kurs 77,364 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 59.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: BTC  |  2026-10-30 02:42 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    77364 USD
+    24h:        -3.12%   (24h-High 81890 / Low 76301.02)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0100%   -> neutral
+    Open Int.:  42785.67658
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 30 (Fear)  -> neutraler Bereich
+
+==========================================================
+  ENDE
+==========================================================
+

@@ -1,68 +1,68 @@
 ==========================================================
-  LIVE-DATEN: AERO  |  2026-11-05 20:42 UTC
+  LIVE-DATEN: AERO  |  2026-11-06 01:36 UTC
 ==========================================================
 
 [1] KURS (Coinbase Spot)
-    Aktuell:    0.6093 USD
-    24h:        -3.94%   (24h-High 0.66646 / Low 0.58363)
-
-[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
-    Funding:    +0.0552%   -> ueberoptimistisch -> Kontra-Signal, Vorsicht Longs
-    Open Int.:  38256368.0
-
-[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
-
-[4] FEAR & GREED INDEX: 50 (Neutral)  -> neutraler Bereich
-
-[5] BTC-KONTEXT
-    BTC 24h:    -4.96%  (Kurs 76,077 USD)
-    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
-    BTC-Dominanz: 59.2%  (steigend = Alts unter Druck)
-
-==========================================================
-  ENDE
-==========================================================
-
-==========================================================
-  LIVE-DATEN: XRP  |  2026-11-05 20:42 UTC
-==========================================================
-
-[1] KURS (Coinbase Spot)
-    Aktuell:    1.2394 USD
-    24h:        -4.88%   (24h-High 1.3258 / Low 1.2267)
-
-[2] FUNDING + OPEN INTEREST (Kraken Futures)
-    Funding:    +0.0012%   -> neutral
-    Open Int.:  16434805.0
-
-[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
-
-[4] FEAR & GREED INDEX: 50 (Neutral)  -> neutraler Bereich
-
-[5] BTC-KONTEXT
-    BTC 24h:    -4.96%  (Kurs 76,077 USD)
-    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
-    BTC-Dominanz: 59.2%  (steigend = Alts unter Druck)
-
-==========================================================
-  ENDE
-==========================================================
-
-==========================================================
-  LIVE-DATEN: BTC  |  2026-11-05 20:42 UTC
-==========================================================
-
-[1] KURS (Coinbase Spot)
-    Aktuell:    76121 USD
-    24h:        -4.90%   (24h-High 80880.8 / Low 75431.17)
+    Aktuell:    0.57889 USD
+    24h:        -9.83%   (24h-High 0.66646 / Low 0.57299)
 
 [2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
     Funding:    +0.0100%   -> neutral
-    Open Int.:  41693.1131
+    Open Int.:  38520286.0
 
 [3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
 
-[4] FEAR & GREED INDEX: 50 (Neutral)  -> neutraler Bereich
+[4] FEAR & GREED INDEX: 28 (Fear)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -5.62%  (Kurs 76,074 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 59.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: XRP  |  2026-11-06 01:36 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    1.2143 USD
+    24h:        -7.08%   (24h-High 1.3258 / Low 1.1978)
+
+[2] FUNDING + OPEN INTEREST (Kraken Futures)
+    Funding:    +0.0014%   -> neutral
+    Open Int.:  16480933.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 28 (Fear)  -> neutraler Bereich
+
+[5] BTC-KONTEXT
+    BTC 24h:    -5.62%  (Kurs 76,074 USD)
+    BTC Funding: +0.0100% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 59.2%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: BTC  |  2026-11-06 01:36 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    76097 USD
+    24h:        -5.59%   (24h-High 80784.93 / Low 75035.1)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0100%   -> neutral
+    Open Int.:  40239.11924
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 28 (Fear)  -> neutraler Bereich
 
 ==========================================================
   ENDE

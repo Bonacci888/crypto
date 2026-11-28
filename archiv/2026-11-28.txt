@@ -1,0 +1,70 @@
+==========================================================
+  LIVE-DATEN: AERO  |  2026-11-28 02:46 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    0.38399 USD
+    24h:        -5.81%   (24h-High 0.41435 / Low 0.3825)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0100%   -> neutral
+    Open Int.:  19584400.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 10 (Extreme Fear)  -> Fear -> Chancenzone (kontraer)
+
+[5] BTC-KONTEXT
+    BTC 24h:    -2.20%  (Kurs 59,893 USD)
+    BTC Funding: +0.0040% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 57.8%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: XRP  |  2026-11-28 02:46 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    0.949 USD
+    24h:        -0.95%   (24h-High 0.986 / Low 0.9302)
+
+[2] FUNDING + OPEN INTEREST (Kraken Futures)
+    Funding:    +0.0004%   -> neutral
+    Open Int.:  8999754.0
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 10 (Extreme Fear)  -> Fear -> Chancenzone (kontraer)
+
+[5] BTC-KONTEXT
+    BTC 24h:    -2.20%  (Kurs 59,893 USD)
+    BTC Funding: +0.0040% (Hyperliquid (8h-aequiv.))  -> neutral
+    BTC-Dominanz: 57.8%  (steigend = Alts unter Druck)
+
+==========================================================
+  ENDE
+==========================================================
+
+==========================================================
+  LIVE-DATEN: BTC  |  2026-11-28 02:46 UTC
+==========================================================
+
+[1] KURS (Coinbase Spot)
+    Aktuell:    59893 USD
+    24h:        -2.20%   (24h-High 62140.28 / Low 58700)
+
+[2] FUNDING + OPEN INTEREST (Hyperliquid (8h-aequiv.))
+    Funding:    +0.0040%   -> neutral
+    Open Int.:  35388.68188
+
+[3] LONG/SHORT-RATIO: n/a (Quelle US-geblockt oder kein Perp)
+
+[4] FEAR & GREED INDEX: 10 (Extreme Fear)  -> Fear -> Chancenzone (kontraer)
+
+==========================================================
+  ENDE
+==========================================================
+
